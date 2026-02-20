@@ -1,0 +1,35 @@
+:root {
+  /* Fonts */
+  --font-display: 'Cormorant Garamond', Georgia, serif;   /* All headings */
+  --font-body:    'DM Sans', system-ui, sans-serif;        /* Body, UI, labels */
+
+  /* Typography Scale */
+  --text-hero:    clamp(52px, 8vw, 96px);
+  --text-h2:      clamp(32px, 5vw, 56px);
+  --text-h3:      clamp(20px, 3vw, 28px);
+  --text-body:    16px;
+  --text-small:   13px;
+  --tracking-wide: 0.15em;   /* Used for all-caps labels */
+
+  /* Colors */
+  --color-black:        #0a0a0a;
+  --color-surface:      #141414;
+  --color-surface-2:    #1c1c1c;
+  --color-border:       #2a2a2a;
+  --color-gold:         #c9a84c;
+  --color-gold-light:   #e2c97e;
+  --color-gold-dark:    #9e7c2e;
+  --color-green:        #2d6a4f;
+  --color-cream:        #f5efe6;
+  --color-cream-muted:  #a09080;
+  --color-white:        #fafafa;
+
+  /* Spacing */
+  --space-xs:   8px;
+  --space-sm:   16px;
+  --space-md:   32px;
+  --space-lg:   64px;
+  --space-xl:   96px;
+  --space-2xl:  128px;
+  --section-padding: clamp(64px, 10vw, 128px) clamp(20px, 6vw, 80px);
+}

@@ -1,0 +1,135 @@
+/*
+ * Royal Soya Chaap
+ * Responsive Styles (Mobile & Tablet)
+ */
+
+@media (max-width: 992px) {
+    .container {
+        padding-left: var(--space-md);
+        padding-right: var(--space-md);
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: clamp(28px, 6vw, 40px);
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: var(--space-sm);
+    }
+
+    .btn-primary,
+    .btn-ghost {
+        padding: 14px 24px;
+    }
+
+    /* Mobile Header */
+    .nav-toggle-label {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .nav-toggle-label span {
+        display: block;
+        height: 2px;
+        width: 100%;
+        background-color: var(--color-gold);
+        transition: all 0.3s ease;
+    }
+
+    .main-nav {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: rgba(10, 10, 10, 0.98);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: var(--space-lg);
+        gap: var(--space-lg);
+        transform: translateY(-150%);
+        opacity: 0;
+        transition: all 0.4s ease;
+        border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+    }
+
+    .nav-list {
+        flex-direction: column;
+        width: 100%;
+        gap: var(--space-md);
+    }
+
+    .nav-toggle-checkbox:checked~.main-nav {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .nav-toggle-checkbox:checked~.nav-toggle-label span:nth-child(1) {
+        transform: translateY(9.5px) rotate(45deg);
+    }
+
+    .nav-toggle-checkbox:checked~.nav-toggle-label span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle-checkbox:checked~.nav-toggle-label span:nth-child(3) {
+        transform: translateY(-9.5px) rotate(-45deg);
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-cta-row {
+        flex-direction: column;
+    }
+
+    .hero-trust-bar {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .trust-strip-inner {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+
+    .footer-bottom {
+        flex-direction: column-reverse;
+        gap: var(--space-md);
+        text-align: center;
+    }
+}
+/* Added to max-width: 768px */
+@media (max-width: 768px) {
+  .stats-row {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+  .b2b-cards {
+    grid-template-columns: 1fr;
+  }
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+  .order-buttons {
+    flex-direction: column;
+  }
+}
+
