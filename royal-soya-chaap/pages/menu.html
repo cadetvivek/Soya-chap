@@ -5,10 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Menu — Royal Soya Chaap</title>
   <meta name="description" content="Explore our premium signature collection of 100% plant-based soya chaap.">
+  <meta property="og:title" content="Our Menu — Royal Soya Chaap">
+  <meta property="og:description" content="Explore our premium signature collection of 100% plant-based soya chaap.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%230a0a0a'/><text x='50' y='68' font-size='60' font-family='Georgia,serif' font-style='italic' fill='%23c9a84c' text-anchor='middle'>R</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/responsive.css">
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- ================= HEADER ================= -->
   <header class="main-header" id="header">
@@ -17,11 +26,11 @@
         <span class="logo-royal">Royal</span><span class="logo-divider"></span><span class="logo-soya">Soya Chaap</span>
       </a>
       <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
-      <label for="nav-toggle" class="nav-toggle-label"><span></span><span></span><span></span></label>
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation menu"><span></span><span></span><span></span></label>
       <nav class="main-nav">
         <ul class="nav-list">
           <li><a href="../index.html" class="nav-link">Home</a></li>
-          <li><a href="menu.html" class="nav-link">Menu</a></li>
+          <li><a href="menu.html" class="nav-link active">Menu</a></li>
           <li><a href="factory.html" class="nav-link">Our Factory</a></li>
           <li><a href="wholesale.html" class="nav-link">Wholesale</a></li>
           <li><a href="about.html" class="nav-link">About</a></li>
@@ -35,7 +44,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="page-hero">
       <img src="https://images.unsplash.com/photo-1544025162-83b63004bbcd?auto=format&fit=crop&q=80&w=1920" alt="Menu Cover" class="hero-bg" loading="eager">
       <div class="hero-overlay"></div>
@@ -45,7 +54,7 @@
     </section>
 
     <!-- ================= SIGNATURE MENU ================= -->
-    <section id="menu" class="signature-menu" style="padding-top: var(--space-2xl); border-top: none;">
+    <section id="menu" class="signature-menu pt-2xl border-top-none">
       <div class="container">
         <div class="menu-grid">
           <article class="dish-card">
@@ -104,7 +113,7 @@
       <div class="footer-col footer-contact">
         <h4 class="footer-title">Contact Us</h4>
         <address>
-          <p>Royal Soya Chaap Manufacturing<br>Industial Estate, Sector 5<br>New Delhi, 1100XX</p>
+          <p>Royal Soya Chaap Manufacturing<br>Industrial Estate, Sector 5<br>New Delhi, 1100XX</p>
           <p class="mt-sm"><strong>Email:</strong> orders@royalsoyachaap.com</p>
         </address>
       </div>
@@ -123,5 +132,12 @@
     </div>
   </footer>
 
+  <script>
+    document.querySelectorAll('.nav-link').forEach(function(link) {
+      link.addEventListener('click', function() {
+        document.getElementById('nav-toggle').checked = false;
+      });
+    });
+  </script>
 </body>
 </html>

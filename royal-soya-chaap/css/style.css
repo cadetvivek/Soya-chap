@@ -3,8 +3,45 @@
  * Main Stylesheet
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 @import './variables.css';
+
+/* Skip Link (Accessibility) */
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 16px;
+    z-index: 9999;
+    background: var(--color-gold);
+    color: var(--color-black);
+    padding: 12px 24px;
+    border-radius: 0 0 8px 8px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Focus Visible Styles (Accessibility) */
+*:focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 3px;
+}
+
+button:focus-visible,
+.btn:focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 3px;
+}
+
+input:focus-visible,
+textarea:focus-visible {
+    outline: none;
+    border-color: var(--color-gold);
+    box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.25);
+}
 
 /* CSS Reset & Base */
 *,
@@ -84,6 +121,8 @@ section {
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    padding-left: var(--space-sm);
+    padding-right: var(--space-sm);
 }
 
 /* Section Header Typography */
@@ -237,8 +276,23 @@ hr.gold-rule {
     transition: color 0.3s ease;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.active {
     color: var(--color-gold);
+}
+
+.nav-link.active {
+    position: relative;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--color-gold);
 }
 
 .header-actions {
@@ -404,6 +458,7 @@ hr.gold-rule {
     height: 100%;
     object-fit: cover;
     z-index: -2;
+    background-color: var(--color-surface-2);
 }
 
 .hero-overlay {
@@ -441,7 +496,7 @@ hr.gold-rule {
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
-.hero h2 {
+.hero-subtitle {
     font-family: var(--font-body);
     font-size: clamp(18px, 2vw, 24px);
     color: var(--color-cream-muted);
@@ -534,6 +589,7 @@ hr.gold-rule {
   position: relative;
   border-radius: 4px;
   overflow: hidden;
+  background-color: var(--color-surface-2);
 }
 
 .story-image {
@@ -586,13 +642,13 @@ hr.gold-rule {
   overflow: hidden;
   border: 1px solid var(--color-border);
   transition: all 0.4s ease;
-  cursor: pointer;
 }
 
 .dish-img-wrap {
   position: relative;
   overflow: hidden;
   aspect-ratio: 4/3;
+  background-color: var(--color-surface-2);
 }
 
 .dish-img-wrap img {
@@ -914,6 +970,11 @@ hr.gold-rule {
 
 .text-center { text-align: center; }
 .mb-xl { margin-bottom: var(--space-xl); }
+.mt-xl { margin-top: var(--space-xl); }
+.pt-2xl { padding-top: var(--space-2xl); }
+.border-none { border: none; }
+.pt-0 { padding-top: 0; }
+.border-top-none { border-top: none; }
 
 .testimonial-grid {
   display: grid;
@@ -975,6 +1036,38 @@ hr.gold-rule {
 }
 
 
+/* --- SCROLL TO TOP BUTTON --- */
+.scroll-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-gold);
+  color: var(--color-black);
+  border: none;
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.scroll-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-top:hover {
+  background: var(--color-gold-light);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(201, 168, 76, 0.4);
+}
+
 /* --- SUBPAGE HERO --- */
 .page-hero {
   position: relative;
@@ -1003,6 +1096,29 @@ hr.gold-rule {
   color: var(--color-gold);
 }
 
+
+/* --- CONTACT INFO STYLES --- */
+.contact-info-text {
+  color: var(--color-cream-muted);
+  margin-bottom: var(--space-md);
+  font-size: 18px;
+}
+
+.contact-address {
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-address strong {
+  color: var(--color-gold);
+}
+
+.contact-form .btn {
+  margin-top: 16px;
+  border: none;
+}
 
 /* --- CONTACT FORM --- */
 .contact-section {

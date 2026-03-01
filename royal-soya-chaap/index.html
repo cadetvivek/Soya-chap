@@ -10,7 +10,7 @@
   <!-- Open Graph -->
   <meta property="og:title" content="Royal Soya Chaap — Premium Plant-Based Food">
   <meta property="og:description" content="Factory-direct, FSSAI certified, globally shipped premium soya chaap.">
-  <meta property="og:image" content="assets/images/hero-bg.jpg">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&q=80&w=1200">
   <meta property="og:url" content="https://royalsoyachaap.com">
   <meta property="og:type" content="website">
 
@@ -19,10 +19,42 @@
   <link rel="canonical" href="https://royalsoyachaap.com">
   <meta name="robots" content="index, follow">
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%230a0a0a'/><text x='50' y='68' font-size='60' font-family='Georgia,serif' font-style='italic' fill='%23c9a84c' text-anchor='middle'>R</text></svg>">
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FoodEstablishment",
+    "name": "Royal Soya Chaap",
+    "description": "FSSAI certified, factory-direct premium plant-based soya chaap. Shipped globally.",
+    "url": "https://royalsoyachaap.com",
+    "servesCuisine": "Indian, Plant-Based, Vegan",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Industrial Estate, Sector 5",
+      "addressLocality": "New Delhi",
+      "postalCode": "1100XX",
+      "addressCountry": "IN"
+    },
+    "email": "orders@royalsoyachaap.com",
+    "sameAs": []
+  }
+  </script>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- ================= HEADER ================= -->
   <header class="main-header" id="header">
@@ -35,7 +67,7 @@
 
       <!-- Pure CSS Mobile Menu Toggle -->
       <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
-      <label for="nav-toggle" class="nav-toggle-label">
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation menu">
         <span></span>
         <span></span>
         <span></span>
@@ -43,7 +75,7 @@
 
       <nav class="main-nav">
         <ul class="nav-list">
-          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="index.html" class="nav-link active">Home</a></li>
           <li><a href="pages/menu.html" class="nav-link">Menu</a></li>
           <li><a href="pages/factory.html" class="nav-link">Our Factory</a></li>
           <li><a href="pages/wholesale.html" class="nav-link">Wholesale</a></li>
@@ -53,8 +85,8 @@
         
         <div class="header-actions">
           <div class="header-badges">
-            <span title="FSSAI Certified" class="trust-icon">🛡️</span>
-            <span title="ISO Standards" class="trust-icon">🧪</span>
+            <span title="FSSAI Certified" class="trust-icon" aria-hidden="true">🛡️</span>
+            <span title="ISO Standards" class="trust-icon" aria-hidden="true">🧪</span>
           </div>
           <a href="#order" class="btn btn-primary btn-sm">Order Now</a>
         </div>
@@ -62,7 +94,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <!-- ================= HERO ================= -->
     <section class="hero">
       <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&q=80&w=1920" alt="Premium Food" class="hero-bg" loading="eager">
@@ -71,7 +103,7 @@
       <div class="hero-content">
         <span class="hero-badge">✦ Factory Direct · FSSAI Certified</span>
         <h1>Experience the Art of Premium Soya Chaap</h1>
-        <h2>Grilled to perfection. Crafted with passion. Shipped from our certified factory — worldwide.</h2>
+        <p class="hero-subtitle">Grilled to perfection. Crafted with passion. Shipped from our certified factory — worldwide.</p>
         
         <div class="hero-trust-bar">
           <span>🌿 100% Plant-Based</span>
@@ -258,6 +290,10 @@
     <!-- ================= WHY CHOOSE US ================= -->
     <section class="why-choose-us">
       <div class="container container-sm">
+        <div class="features-header text-center mb-xl">
+          <span class="section-label">— Why Choose Us</span>
+          <h2 class="section-title">The Royal Difference</h2>
+        </div>
         <div class="features-grid">
           <div class="feature-card">
             <div class="feature-icon-circle">🌿</div>
@@ -319,7 +355,7 @@
         <div class="b2b-header">
           <span class="section-label">— Bulk & Wholesale</span>
           <h2 class="section-title">Partner With Us. Scale With Quality.</h2>
-          <p>Are you a restaurant owner, cloud kitchen, caterer, and food distributor? We offer bulk factory-direct pricing with custom packaging and branding options.</p>
+          <p>Are you a restaurant owner, cloud kitchen, caterer, or food distributor? We offer bulk factory-direct pricing with custom packaging and branding options.</p>
         </div>
         
         <div class="b2b-cards">
@@ -353,17 +389,17 @@
         
         <div class="testimonial-grid">
           <div class="test-card">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <div class="stars" role="img" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
             <blockquote>"The consistency and hygiene standards are unmatched. Our customers love the texture of the malai chaap. A true premium product."</blockquote>
             <cite>— Rajiv M., Cloud Kitchen Owner, Dubai</cite>
           </div>
           <div class="test-card">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <div class="stars" role="img" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
             <blockquote>"Switching to Royal Soya Chaap was the best decision for our vegan menu. The factory-direct quality makes a huge difference."</blockquote>
             <cite>— Sarah L., Restaurant Chef, London</cite>
           </div>
           <div class="test-card">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <div class="stars" role="img" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
             <blockquote>"Vacuum sealed packaging ensures absolute freshness upon arrival. The tandoori seekh chaap is a massive hit in our supermarket."</blockquote>
             <cite>— Amit V., Retail Distributor, Toronto</cite>
           </div>
@@ -384,6 +420,9 @@
     </section>
 
   </main>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top" id="scrollTopBtn" aria-label="Scroll to top" title="Back to top">&#8593;</button>
 
   <!-- ================= FOOTER ================= -->
   <footer class="main-footer">
@@ -458,5 +497,26 @@
     </div>
   </footer>
 
+  <script>
+    // Mobile nav: close on link click
+    document.querySelectorAll('.nav-link').forEach(function(link) {
+      link.addEventListener('click', function() {
+        document.getElementById('nav-toggle').checked = false;
+      });
+    });
+
+    // Scroll to top button
+    var scrollBtn = document.getElementById('scrollTopBtn');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 600) {
+        scrollBtn.classList.add('visible');
+      } else {
+        scrollBtn.classList.remove('visible');
+      }
+    });
+    scrollBtn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>

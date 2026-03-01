@@ -1,15 +1,30 @@
 /*
  * Royal Soya Chaap
- * Responsive Styles (Mobile & Tablet)
+ * Responsive Styles (Mobile, Tablet, Laptop)
  */
 
+/* Tablets Landscape */
 @media (max-width: 992px) {
     .container {
         padding-left: var(--space-md);
         padding-right: var(--space-md);
     }
+
+    /* Adjust grids for tablets */
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .testimonial-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .b2b-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
+/* Tablets Portrait & Mobile */
 @media (max-width: 768px) {
     .section-title {
         font-size: clamp(28px, 6vw, 40px);
@@ -23,9 +38,10 @@
     .btn-primary,
     .btn-ghost {
         padding: 14px 24px;
+        justify-content: center;
     }
 
-    /* Mobile Header */
+    /* Mobile Header Navigation */
     .nav-toggle-label {
         display: flex;
         flex-direction: column;
@@ -49,6 +65,9 @@
         top: 80px;
         left: 0;
         width: 100%;
+        height: calc(100vh - 80px);
+        /* Fill the rest of the screen */
+        overflow-y: auto;
         background: rgba(10, 10, 10, 0.98);
         backdrop-filter: blur(20px);
         flex-direction: column;
@@ -84,11 +103,72 @@
         transform: translateY(-9.5px) rotate(-45deg);
     }
 
+    /* Header Badges */
+    .header-badges {
+        display: none;
+        /* Hide on small screens to save space */
+    }
+
+    /* Grids and Layouts flattening */
     .footer-container {
         grid-template-columns: 1fr 1fr;
     }
+
+    .story-container {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-row {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+
+    .b2b-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .order-buttons {
+        flex-direction: column;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Timeline flattening */
+    .timeline {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-lg);
+    }
+
+    .timeline::before {
+        display: none;
+        /* remove horizontal line */
+    }
+
+    .timeline-step {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* Feature points side-by-side on mobile where possible or stacked */
+    .factory-features {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
+/* Small Mobile */
 @media (max-width: 480px) {
     .hero-cta-row {
         flex-direction: column;
@@ -99,10 +179,19 @@
         gap: 12px;
     }
 
+    .hero-trust-bar span:nth-child(even) {
+        display: none;
+        /* hides the bullet points */
+    }
+
     .trust-strip-inner {
         flex-direction: column;
         gap: 16px;
         text-align: center;
+    }
+
+    .trust-strip-inner .hide-mobile {
+        display: none;
     }
 
     .footer-container {
@@ -115,21 +204,13 @@
         gap: var(--space-md);
         text-align: center;
     }
-}
-/* Added to max-width: 768px */
-@media (max-width: 768px) {
-  .stats-row {
-    grid-template-columns: 1fr;
-    gap: var(--space-lg);
-  }
-  .b2b-cards {
-    grid-template-columns: 1fr;
-  }
-  .testimonial-grid {
-    grid-template-columns: 1fr;
-  }
-  .order-buttons {
-    flex-direction: column;
-  }
-}
 
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-large {
+        padding: 16px 20px;
+        font-size: 15px;
+    }
+}

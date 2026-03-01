@@ -5,10 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us — Royal Soya Chaap</title>
   <meta name="description" content="Get in touch for orders, wholesale pricing, factory visits, or any queries.">
+  <meta property="og:title" content="Contact Us — Royal Soya Chaap">
+  <meta property="og:description" content="Get in touch for orders, wholesale pricing, factory visits, or any queries.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%230a0a0a'/><text x='50' y='68' font-size='60' font-family='Georgia,serif' font-style='italic' fill='%23c9a84c' text-anchor='middle'>R</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/responsive.css">
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <!-- ================= HEADER ================= -->
   <header class="main-header" id="header">
     <div class="container header-container">
@@ -16,7 +26,7 @@
         <span class="logo-royal">Royal</span><span class="logo-divider"></span><span class="logo-soya">Soya Chaap</span>
       </a>
       <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
-      <label for="nav-toggle" class="nav-toggle-label"><span></span><span></span><span></span></label>
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation menu"><span></span><span></span><span></span></label>
       <nav class="main-nav">
         <ul class="nav-list">
           <li><a href="../index.html" class="nav-link">Home</a></li>
@@ -24,7 +34,7 @@
           <li><a href="factory.html" class="nav-link">Our Factory</a></li>
           <li><a href="wholesale.html" class="nav-link">Wholesale</a></li>
           <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
         </ul>
         <div class="header-actions">
           <div class="header-badges"><span title="FSSAI Certified" class="trust-icon">🛡️</span></div>
@@ -34,7 +44,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="page-hero">
       <img src="https://images.unsplash.com/photo-1596524430615-b46475ddff6e?auto=format&fit=crop&q=80&w=1920" alt="Contact Us" class="hero-bg" loading="eager">
       <div class="hero-overlay"></div>
@@ -50,16 +60,16 @@
           <div class="contact-info">
             <span class="section-label">— Reach Out</span>
             <h2 class="section-title">We'd Love to Hear From You</h2>
-            <p style="color: var(--color-cream-muted); margin-bottom: var(--space-md); font-size: 18px;">
+            <p class="contact-info-text">
               Whether you want to place a direct order, inquire about wholesale pricing, or book a factory tour, our team is ready to assist you.
             </p>
-            <address style="font-style: normal; display: flex; flex-direction: column; gap: 16px;">
+            <address class="contact-address">
               <div>
-                <strong style="color: var(--color-gold);">Factory Address:</strong><br>
+                <strong>Factory Address:</strong><br>
                 Royal Soya Chaap Manufacturing<br>Industrial Estate, Sector 5<br>New Delhi, 1100XX, India
               </div>
               <div>
-                <strong style="color: var(--color-gold);">Direct Contact:</strong><br>
+                <strong>Direct Contact:</strong><br>
                 Phone: <a href="tel:+91XXXXXXXXXX">+91 XXXXXXXXXX</a><br>
                 Email: <a href="mailto:orders@royalsoyachaap.com">orders@royalsoyachaap.com</a>
               </div>
@@ -85,7 +95,7 @@
                 <label for="message">Message</label>
                 <textarea id="message" name="message" class="form-input" required></textarea>
               </div>
-              <button type="submit" class="btn btn-primary" style="margin-top: 16px; border: none;">Send Message</button>
+              <button type="submit" class="btn btn-primary">Send Message</button>
             </form>
           </div>
         </div>
@@ -93,9 +103,9 @@
     </section>
 
     <!-- ================= ORDER MULTI-CHANNEL ================= -->
-    <section id="order" class="order-cta-section" style="border-top: none; padding-top: 0;">
+    <section id="order" class="order-cta-section border-top-none pt-0">
       <div class="container text-center">
-        <h2 class="section-title" style="margin-top: var(--space-xl);">Prefer to order instantly?</h2>
+        <h2 class="section-title mt-xl">Prefer to order instantly?</h2>
         <div class="order-buttons">
           <a href="https://wa.me/91XXXXXXXXXX?text=Hi%20Royal%20Soya%20Chaap%2C%20I%20would%20like%20to%20place%20an%20order" class="btn btn-primary btn-large">💬 Order via WhatsApp</a>
           <a href="tel:+91XXXXXXXXXX" class="btn btn-ghost btn-large">📞 Call Us Now</a>
@@ -130,7 +140,7 @@
       <div class="footer-col footer-contact">
         <h4 class="footer-title">Contact Us</h4>
         <address>
-          <p>Royal Soya Chaap Manufacturing<br>Industial Estate, Sector 5<br>New Delhi, 1100XX</p>
+          <p>Royal Soya Chaap Manufacturing<br>Industrial Estate, Sector 5<br>New Delhi, 1100XX</p>
           <p class="mt-sm"><strong>Email:</strong> orders@royalsoyachaap.com</p>
         </address>
       </div>
@@ -148,5 +158,12 @@
       <div class="legal-links"><a href="#">Privacy</a><a href="#">Terms</a></div>
     </div>
   </footer>
+  <script>
+    document.querySelectorAll('.nav-link').forEach(function(link) {
+      link.addEventListener('click', function() {
+        document.getElementById('nav-toggle').checked = false;
+      });
+    });
+  </script>
 </body>
 </html>
